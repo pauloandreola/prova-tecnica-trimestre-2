@@ -3,7 +3,7 @@ import { Team } from "../entities/team"
 import { teamModel } from "../models/teamModels";
 import { badRequest, done, internalServerError, notFound, validateNumber } from "../services/util";
 
-//  Método para deletar um item pelo id passado pelo params, verificando se ele existe
+// Método para deletar um item pelo id passado pelo params, verificando se ele existe
 const deleteTeamID = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   {
@@ -47,7 +47,7 @@ const listAllTeams = (req: Request, res: Response) => {
   })
   .catch(err => internalServerError(res, err));
 }
-//  Método para listar um item pelo id passado pelo params, verificando se ele existe
+// Método para listar um item pelo id passado pelo params, verificando se ele existe
 const listTeamID = (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   {

@@ -41,7 +41,7 @@ const insertPlayer = (req: Request, res: Response) => {
     .catch(err => internalServerError(res, err));
 }
 
-// Mêtodo para listar todos os produtos em banco de dados
+// Método para listar todos os produtos em banco de dados
 const listAllPlayers = (req: Request, res: Response) => {
   return playerModel.listAllPlayers()
   .then(players => {
