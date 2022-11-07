@@ -4,4 +4,4 @@ export type Team = {
 	"coach": string,
 	"stadium": string,
 	"city": string,
-};
+}
