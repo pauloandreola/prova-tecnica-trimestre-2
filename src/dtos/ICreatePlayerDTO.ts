@@ -1,7 +1,7 @@
 export interface ICreatePlayerDTO {
-  "id": string,
-	"team_id": string,
+  "id"?: string,
 	"name": string,
+	"team_id": string,
 	"age": number,
 	"position": string,
 	"goals": number

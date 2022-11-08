@@ -1,10 +1,11 @@
+import { ICreateTeamDTO } from "../dtos/ICreateTeamDTO";
 import { Team } from "../entities/team";
 
 
 export interface ITeamsRepository {
 
-  deleteTeamID(Id: string): Promise<Team>;
-  insertTeam(data: ITeamsRepository): Promise<void>;
-  listAllTeams(): Promise<Team>;
-  listTeamID(id: string): Promise<Team>;
+  deleteTeamID(id: string): Promise<void>;
+  insertTeam({id, name, coach, stadium, city}: ICreateTeamDTO): Promise<void>;
+  listAllTeams(): Promise<Team[]>;
+  listTeamID(id: string): Promise<any>;
 };

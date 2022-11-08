@@ -5,6 +5,6 @@ import { Player } from "../entities/player";
 export interface IPlayersRepository {
   deletePlayerID(id: string): Promise<Player>;
   insertPlayer(data: ICreatePlayerDTO): Promise<void>;
-  listAllPlayers(data: ICreatePlayerDTO): Promise<Player>;
+  listAllPlayers(): Promise<Player[]>;
   listPlayerID(id: string): Promise<Player>;
 };

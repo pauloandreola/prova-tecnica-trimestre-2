@@ -10,7 +10,7 @@ const deletePlayerID = async (id: number) => {
 
 // Método para inserir um item no banco de dados
 const insertPlayer = async (player: Player) => {
-  await dbQuery(`INSERT INTO player (team_id, name, age, position, goals) VALUES(?, ?, ?, ?, ?)`, [player.team_id, player.name, player.age, player.position, player.goals])
+  await dbQuery(`INSERT INTO player (name, team_id, age, position, goals) VALUES(?, ?, ?, ?, ?)`, [player.team_id, player.name, player.age, player.position, player.goals])
   data = await dbQuery(`SELECT seq As Id FROM sqlite_sequence WHERE name = 'player'`);
   return listPlayerID(data[0].Id);
 }

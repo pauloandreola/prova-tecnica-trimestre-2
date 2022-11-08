@@ -1,19 +1,35 @@
+import { ICreateTeamDTO } from "../../dtos/ICreateTeamDTO";
 import { Team } from "../../entities/team";
+import { dbQuery, dbQueryFirst } from "../../services/db";
 import { ITeamsRepository } from "../ITeamsRepository";
 
+let data = [] as any;
 
 export class TeamsRepository implements ITeamsRepository {
-  deleteTeamID(Id: string): Promise<Team> {
-    throw new Error("Method not implemented.");
+ 
+  constructor() {}
+  // Método para deletar o item pelo id: que está no banco de dados
+  async deleteTeamID(id: string): Promise<void> {
+    await dbQueryFirst(`DELETE * FROM team WHERE id = ?`, [id]);
   }
-  insertTeam(data: ITeamsRepository): Promise<void> {
-    throw new Error("Method not implemented.");
+
+  // Método para inserir um item no banco de dados
+  async insertTeam({name, coach, stadium, city}: ICreateTeamDTO): Promise<void> {
+    await dbQuery(`INSERT INTO team (name, coach, stadium, city) VALUES(?, ?, ?, ?)`, [name, coach, stadium, city])
+    data = await dbQuery(`SELECT seq As Id FROM sqlite_sequence WHERE name = 'team'`);
+    return this.listTeamID(data[0].Id);
   }
-  listAllTeams(): Promise<Team> {
-    throw new Error("Method not implemented.");
-  }
-  listTeamID(id: string): Promise<Team> {
-    throw new Error("Method not implemented.");
-  }
+
+  // Método para listar todos os produtos que estão no banco de dados
+ async listAllTeams(): Promise<any> {
+  const data = await dbQuery(`SELECT * FROM  team`);
+  return data as Team[];
+ }
+
+  // Método para listar o item pelo id: que está no banco de dados
+ async listTeamID(id: string): Promise<any> {
+  const data = await dbQueryFirst(`SELECT * FROM  team WHERE id = ?`, [id]);
+  return data as Team;
+ }
 
 }
