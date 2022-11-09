@@ -1,5 +1,4 @@
-import { PlayersRepository } from "../../../repositories/implementations/playersRepository";
-
+import { PlayersRepository } from "../../../modules/repositories/implementations/playersRepository";
 
 export class DeletePlayerUseCase {
   constructor(private playersRepository: PlayersRepository) {}
@@ -10,6 +9,6 @@ export class DeletePlayerUseCase {
     if(!playerSaved) {
       throw new Error("Players doesn't exists")
     }
-  }
     this.playersRepository.deletePlayerID(id)
+  }
 }

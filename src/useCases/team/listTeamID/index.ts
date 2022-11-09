@@ -1,7 +1,6 @@
-import { TeamsRepository } from "../../../repositories/implementations/teamsRepository";
+import { TeamsRepository } from "../../../modules/repositories/implementations/teamsRepository";
 import { ListTeamIDController } from "./listTeamIDController";
 import { ListTeamIDUseCase } from "./listTeamIDUseCase";
-
 
 const teamsRepository = new TeamsRepository();
 const listTeamIDUseCase = new ListTeamIDUseCase(teamsRepository);

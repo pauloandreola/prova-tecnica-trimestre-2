@@ -1,7 +1,6 @@
-import { TeamsRepository } from "../../../repositories/implementations/teamsRepository";
+import { TeamsRepository } from "../../../modules/repositories/implementations/teamsRepository";
 import { CreateTeamController } from "./createTeamController";
 import { CreateTeamUseCase } from "./createTeamUseCase";
-
 
 const teamsRepository = new TeamsRepository();
 const createTeamUseCase = new CreateTeamUseCase(teamsRepository);

@@ -1,6 +1,5 @@
-import { Team } from "../../../entities/team";
-import { TeamsRepository } from "../../../repositories/implementations/teamsRepository";
-
+import { Team } from "../../../modules/entities/team";
+import { TeamsRepository } from "../../../modules/repositories/implementations/teamsRepository";
 
 export class ListAllTeamsUseCase {
   constructor(private teamsRepository: TeamsRepository) {}

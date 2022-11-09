@@ -1,7 +1,7 @@
-import { ICreatePlayerDTO } from "../../dtos/ICreatePlayerDTO";
+import { ICreatePlayerDTO } from "../../../dtos/ICreatePlayerDTO";
 import { IPlayersRepository } from "../IPlayersRepository";
 import { Player } from "../../entities/player"
-import { dbQuery, dbQueryFirst } from "../../services/db";
+import { dbQuery, dbQueryFirst } from "../../../services/db";
 
 let data = [] as any;
 

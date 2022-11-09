@@ -1,5 +1,5 @@
 import { ICreatePlayerDTO } from "../../../dtos/ICreatePlayerDTO";
-import { PlayersRepository } from "../../../repositories/implementations/playersRepository";
+import { PlayersRepository } from "../../../modules/repositories/implementations/playersRepository";
 
 export class CreatePlayerUseCase {
   constructor(private playersRepository: PlayersRepository) {}

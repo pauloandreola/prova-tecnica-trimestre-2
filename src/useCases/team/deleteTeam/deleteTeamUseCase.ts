@@ -1,4 +1,4 @@
-import { TeamsRepository } from "../../../repositories/implementations/teamsRepository";
+import { TeamsRepository } from "../../../modules/repositories/implementations/teamsRepository";
 
 export class DeleteTeamUseCase {
   constructor(private teamsRepository: TeamsRepository) {}
@@ -9,6 +9,6 @@ export class DeleteTeamUseCase {
     if(!teamAlreadyExists) {
       throw new Error("Team doesn't exists")
     }
+    this.teamsRepository.deleteTeamID(id);
   }
-    this.teamsRepository.deletePlayerID(id);
 }

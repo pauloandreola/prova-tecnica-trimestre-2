@@ -1,4 +1,4 @@
-import { PlayersRepository } from "../../../repositories/implementations/playersRepository";
+import { PlayersRepository } from "../../../modules/repositories/implementations/playersRepository";
 import { DeletePlayerController } from "./deletePlayerController";
 import { DeletePlayerUseCase } from "./deletePlayerUseCase";
 

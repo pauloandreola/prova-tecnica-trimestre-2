@@ -1,5 +1,5 @@
 import { ICreateTeamDTO } from "../../../dtos/ICreateTeamDTO";
-import { TeamsRepository } from "../../../repositories/implementations/teamsRepository";
+import { TeamsRepository } from "../../../modules/repositories/implementations/teamsRepository";
 
 export class CreateTeamUseCase {
   constructor(private teamsRepository: TeamsRepository) {}

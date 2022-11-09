@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { done } from "../../../services/util";
 import { CreatePlayerUseCase } from "./createPlayerUseCase";
 
 export class CreatePlayerController {
@@ -9,7 +8,7 @@ export class CreatePlayerController {
     try {
       const {name, team_id, age, position, goals} = req.body;
       await this.createPlayerUseCase.execute({name, team_id, age, position, goals});
-      return done(res).json();
+      return res.status(200).json();
 
     } catch (error) {
       return res.status(400).json(error);

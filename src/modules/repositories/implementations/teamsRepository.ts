@@ -1,6 +1,6 @@
-import { ICreateTeamDTO } from "../../dtos/ICreateTeamDTO";
+import { ICreateTeamDTO } from "../../../dtos/ICreateTeamDTO";
 import { Team } from "../../entities/team";
-import { dbQuery, dbQueryFirst } from "../../services/db";
+import { dbQuery, dbQueryFirst } from "../../../services/db";
 import { ITeamsRepository } from "../ITeamsRepository";
 
 let data = [] as any;
