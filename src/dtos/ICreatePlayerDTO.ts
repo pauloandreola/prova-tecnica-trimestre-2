@@ -1,8 +1,8 @@
 export interface ICreatePlayerDTO {
-  "id"?: string,
-	"name": string,
-	"team_id": string,
-	"age": number,
-	"position": string,
-	"goals": number
+	id?: string,
+	team_id: string | null,
+	name: string,
+	age: number,
+	position: "Goalkeeper" | "Defender" | "Midfielder" | "Forward"
+	goals: number,
 }

@@ -3,6 +3,6 @@ import { CreateTeamController } from "./createTeamController";
 import { CreateTeamUseCase } from "./createTeamUseCase";
 
 
-const teamRepository = new TeamsRepository();
-const createTeamUseCase = new CreateTeamUseCase(teamRepository);
+const teamsRepository = new TeamsRepository();
+const createTeamUseCase = new CreateTeamUseCase(teamsRepository);
 export const createTeamController = new CreateTeamController(createTeamUseCase); 

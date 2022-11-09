@@ -8,8 +8,8 @@ export class ListTeamIDUseCase {
     const team = await this.teamsRepository.listTeamID(id);
     {
       if(!team)
-        throw new Error('Invalid team')
+        throw new Error("Invalid team")
     }
-     return team;
+      return team;
   }
 }

@@ -1,9 +1,8 @@
 import { ICreatePlayerDTO } from "../../../dtos/ICreatePlayerDTO";
-import { IPlayersRepository } from "../../../repositories/IPlayersRepository";
+import { PlayersRepository } from "../../../repositories/implementations/playersRepository";
 
 export class CreatePlayerUseCase {
-
-  constructor(private playersRepository: IPlayersRepository) {}
+  constructor(private playersRepository: PlayersRepository) {}
 
   async execute({name,team_id, age, position, goals}: ICreatePlayerDTO): Promise<void> {
 
@@ -13,12 +12,6 @@ export class CreatePlayerUseCase {
       throw new Error("User already exists");
     }
 
-    await this.playersRepository.insertPlayer({
-      name,
-      team_id,
-      age,
-      position,
-      goals
-    });
+    await this.playersRepository.insertPlayer({name, team_id, age, position, goals});
   }
 }

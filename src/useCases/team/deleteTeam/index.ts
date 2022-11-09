@@ -3,6 +3,6 @@ import { DeleteTeamController } from "./deleteTeamController";
 import { DeleteTeamUseCase } from "./deleteTeamUseCase";
 
 
-const teamRepository = new TeamsRepository();
-const deleteTeamUseCase = new DeleteTeamUseCase(teamRepository);
+const teamsRepository = new TeamsRepository();
+const deleteTeamUseCase = new DeleteTeamUseCase(teamsRepository);
 export const deleteTeamController = new DeleteTeamController(deleteTeamUseCase);

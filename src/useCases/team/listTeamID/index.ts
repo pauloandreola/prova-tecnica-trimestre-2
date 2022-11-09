@@ -3,6 +3,6 @@ import { ListTeamIDController } from "./listTeamIDController";
 import { ListTeamIDUseCase } from "./listTeamIDUseCase";
 
 
-const teamRepository = new TeamsRepository();
-const listTeamIDUseCase = new ListTeamIDUseCase(teamRepository);
+const teamsRepository = new TeamsRepository();
+const listTeamIDUseCase = new ListTeamIDUseCase(teamsRepository);
 export const listTeamIDController = new ListTeamIDController(listTeamIDUseCase);

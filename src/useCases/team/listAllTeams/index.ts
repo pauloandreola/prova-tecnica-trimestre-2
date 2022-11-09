@@ -3,6 +3,6 @@ import { ListAllTeamsControllers } from "./ListAllTeamsController";
 import { ListAllTeamsUseCase } from "./listAllTeamsUseCase";
 
 
-const teamRepository = new TeamsRepository();
-const listAllTeamsUseCase = new ListAllTeamsUseCase(teamRepository);
+const teamsRepository = new TeamsRepository();
+const listAllTeamsUseCase = new ListAllTeamsUseCase(teamsRepository);
 export const listAllTeamsControllers = new ListAllTeamsControllers(listAllTeamsUseCase);

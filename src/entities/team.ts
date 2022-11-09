@@ -1,9 +1,9 @@
 export class Team {
-	id?: string;
-	name?: string;
-	coach?: string;
-	stadium?: string;
-	city?: string;
+	"id": string
+	"name": string
+	"coach": string
+	"stadium": string
+	"city": string
 
 	constructor(id: string, name: string,coach: string, stadium: string, city: string) {
 		id = id;
@@ -12,4 +12,4 @@ export class Team {
 		stadium = stadium;
 		city = city;
 	}
-}
+};

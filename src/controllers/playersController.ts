@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Player } from "../entities/player";
-import { playerModel } from "../models/playerModels";
+// import { playerModel } from "../models/playerModels";
 import { badRequest, done, internalServerError, notFound, validateNumber } from "../services/util";
 
 //  Método para deletar um item pelo id passado pelo params, verificando se ele existe
